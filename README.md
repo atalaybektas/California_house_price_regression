@@ -19,14 +19,13 @@
 
 
 4. **Model Training:**  
-   Training a **Linear Regression** RandomForest Regressor and Gradiant Boosting  model with the selected features
+   Training a **Linear Regression** **RandomForest Regressor** and **Gradiant Boosting**  model with the selected features
 
 5. **Model Evaluation:**  
-   Calculating:
    - Root Mean Squared Error (RMSE)
    - Mean Absolute Error (MAE)
    - R² Score  
-   Visualizing predictions vs true values using Matplotlib
+   -Visualizing predictions vs true values using Matplotlib
 
 
 
