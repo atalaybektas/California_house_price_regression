@@ -19,7 +19,7 @@
 
 
 4. **Model Training:**  
-   Training a **Linear Regression** **RandomForest Regressor** and **Gradiant Boosting**  model with the selected features
+   Training a **Linear Regression**, **RandomForest Regressor** and **Gradiant Boosting**  model with the selected features
 
 5. **Model Evaluation:**  
    - Root Mean Squared Error (RMSE)
