@@ -1,16 +1,44 @@
-# House Value Prediction with Pyspark
+# 🏠 California Housing Price Prediction with PySpark
 
-Bu proje, Spark ML kütüphanesi kullanılarak PySpark ile bir regresyon modeli oluşturarak konut fiyatlarını tahmin etmeyi amaçlamaktadır. Büyük ölçekli veri işleme kapasitesine sahip Apache Spark kullanılarak veri yükleme, işleme ve makine öğrenmesi modeli oluşturma adımları gerçekleştirilmiştir.
+This project demonstrates a scalable machine learning pipeline using **Apache Spark (PySpark)** to predict median house values in California. It covers the entire data science workflow, including data cleaning, feature engineering, model training, and evaluation — all within a distributed computing framework.
 
-Kullanılan Teknolojiler:
-Apache Spark (PySpark)
-Python
-Spark ML 
+---
 
-Adımlar:
-1. Spark Session Starting ve Data nın yüklenmesi:
-2. Null değerlerin tespiti ve Null değerlerin median ile doldurulması
-3. Outlier tespiti ve temizlenmesi
-4. Verinin regresyon modellerinin uygulanması için hazırlanması
-5. Regresyon modellerinin uygulanması
-6. Görselleştirme
+## 📌 Project Overview
+
+- **Objective:** Predict `median_house_value` using a linear regression model built with Spark MLlib.
+- **Tools:** PySpark (Spark MLlib), Pandas, Matplotlib
+- **Dataset:** [California Housing Prices - Kaggle](https://www.kaggle.com/datasets/camnugent/california-housing-prices)
+
+---
+
+## 🔍 Steps & Pipeline
+
+1. **Data Loading:**  
+   Read CSV data into a Spark DataFrame using `spark.read.csv()`
+
+2. **Data Cleaning:**  
+   - Handling missing values in `total_bedrooms` by filling with mean  
+   - Removing outliers from `total_rooms` using the IQR method
+
+3. **Data Preprocessing:**  
+   - Converting categorical `ocean_proximity` to numeric using `StringIndexer`  
+   - Combining features using `VectorAssembler`
+
+4. **Train-Test Split:**  
+   Splitting the dataset randomly (80% training, 20% test)
+
+5. **Model Training:**  
+   Training a **Linear Regression** model with the selected features
+
+6. **Model Evaluation:**  
+   Calculating:
+   - Root Mean Squared Error (RMSE)
+   - Mean Absolute Error (MAE)
+   - R² Score  
+   Visualizing predictions vs true values using Matplotlib
+
+---
+
+## 📊 Example Output
+
